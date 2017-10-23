@@ -256,7 +256,7 @@ span.hpopup:after{content:attr(data-popuptext);background:rgba(0,0,0,.85);border
 					update();
 					function update() {
 						gethi = new XMLHttpRequest();
-						gethi.open("GET","https://sslapi.hitokoto.cn/?c=a"); 
+						gethi.open("GET","https://api.shino.cc/hi/"); 
 						gethi.send();
 						gethi.onreadystatechange = function () {
 						if (gethi.readyState===4 && gethi.status===200) {
@@ -289,7 +289,7 @@ span.hpopup:after{content:attr(data-popuptext);background:rgba(0,0,0,.85);border
 
 					function update() {
 						gethi = new XMLHttpRequest();
-						gethi.open("GET", "https://sslapi.hitokoto.cn/?c=a");
+						gethi.open("GET", "https://api.shino.cc/hi/");
 						gethi.send();
 						gethi.onreadystatechange = function() {
 							if (gethi.readyState === 4 && gethi.status === 200) {
