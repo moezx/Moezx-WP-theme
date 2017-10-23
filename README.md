@@ -9,4 +9,8 @@ Plugin must be installed:
 
 [WP Statistics](https://wordpress.org/plugins/wp-statistics/)
 
-Directly upload working themes, so some of my info should be modified. But please keep the link to this page. 
+## How to use?
+
+Download as zip file or git the whole project to your computer, rename the project floder as `Moezx`, then upload it to `yourpath/wp-content/themes`. Now you can active it.
+
+I just directly uploaded my working themes, so some of my info should be modified. But **please keep the link to this page**. 
