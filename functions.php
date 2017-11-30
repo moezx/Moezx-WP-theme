@@ -98,7 +98,7 @@ include_once( TEMPLATEPATH. '/includes/shortcodes.php' );
 /* 替换图片链接为 https */
 function my_content_manipulator($content){
     if( is_ssl() ){
-        $content = str_replace('http://www.dahuzi.me/wp-content/uploads', 'https://www.dahuzi.me/wp-content/uploads', $content);
+        $content = str_replace('http://2heng.xin/wp-content/uploads', 'https://2heng.xin/wp-content/uploads', $content);
     }
     return $content;
     }
