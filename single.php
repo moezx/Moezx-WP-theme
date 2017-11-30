@@ -23,13 +23,15 @@ global $user_ID; if( $user_ID && current_user_can('level_10') ) : ?><span style=
 	<?php endwhile; ?>
 	<p><b>以上。 <span style="font-size:18px"><i class="fa fa-github" aria-hidden="true"></i></span></b></p>
 	<p>如果你喜欢这篇文章可以资助我，我将非常感激，因为服务器本身是一项不小的开支、博客的维护也需要大量精力，而博主只是一个普通的本科生  (,,• ₃ •,,)</p>
+	<!--<iframe src="https://2heng.xin/donate/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>-->
 	<a href="#donatebox"><span style="color: #ff6600;">打赏 | Donate</span></a><a href="#linkme"><span style="color: #ff6600;">&nbsp;&nbsp;&nbsp;关注 | Follow</span></a><span style="color: #ff6600;" id="social-share">&nbsp;&nbsp;&nbsp;分享 | Share</span><br>
 	<div style="display: none;" class="" id="social">
 		<center><br><br><div class="social-share" data-disabled="diandian"></div></center>
 	</div>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
-	<br><p align="center">本站全部文字在<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" style="text-decoration: none"><i class="fa fa-creative-commons" aria-hidden="true"></i>署名 4.0 国际 (CC BY 4.0)</a>条款下提供，<b>转载请注明出处</b>。</p>
+	<br>
+	<p align="center">本站全部文字在<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" style="text-decoration: none;color:#444;text-decoration:underline"><i class="fa fa-creative-commons" aria-hidden="true"></i>署名 4.0 国际 (CC BY 4.0)</a>条款下提供，<b>转载请注明出处</b>。</p>
 	</div>
 	<div class="meta split split--responsive cf">
 		<div class="split__title">

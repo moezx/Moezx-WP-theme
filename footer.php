@@ -3,9 +3,12 @@
 		<div class="layout layout--center">
 			<div class="layout__item palm-mb">
 				<div class="media"><a href="https://www.2heng.xin" target="_blank">
-					<img class="media__img avatar" id="pagedown" src="https://2heng.xin/wp-content/uploads/2017/08/avatar1.jpg" alt="" height="50" width="50"></a>
+					<img class="media__img avatar" id="pagedown" src="https://2heng.xin/wp-content/uploads/2017/08/avatar1.jpg<?php #echo stripslashes(get_option('strive_zztxurl')); ?>" alt="" height="80" width="80"></a>
 					<div class="media__body">
-						<h4><b><em>Just as Gump's mom said:</em></b></h4>
+						<h4><b><em>Just as Gump's mom said:</em><?php #echo stripslashes(get_option('strive_zznc')); ?></b></h4>
+						<!--<p>
+							<?php echo stripslashes(get_option('strive_grsm')); ?>
+						</p>-->
 						<div><p style="font-size:20px"><b><em>"You got to put the past behind you before you can move on."</em></b></p>
 						</div>
 					</div>
@@ -14,117 +17,23 @@
 		</div>
 	</div>
 </div>
-<!--Icon font-->
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_434143_aaewsyx2ypnzh0k9.css">
-<style>
-[data-balloon]{position:relative}[data-balloon]:after,[data-balloon]:before{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);-khtml-opacity:0;-moz-opacity:0;opacity:0;pointer-events:none;-webkit-transition:all .18s ease-out .18s;transition:all .18s ease-out .18s;bottom:100%;left:50%;position:absolute;z-index:10;-webkit-transform:translate(-50%,10px);-ms-transform:translate(-50%,10px);transform:translate(-50%,10px);-webkit-transform-origin:top;-ms-transform-origin:top;transform-origin:top}[data-balloon]:after{background:rgba(17,17,17,.9);border-radius:4px;color:#fff;content:attr(data-balloon);font-size:12px;padding:.5em 1em;white-space:nowrap;margin-bottom:11px}[data-balloon]:before{background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="12px"><path fill="rgba(17, 17, 17, 0.9)" transform="rotate(0)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>') no-repeat;background-size:100% auto;height:6px;width:18px;content:"";margin-bottom:5px}[data-balloon]:hover:after,[data-balloon]:hover:before{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter:alpha(opacity=100);-khtml-opacity:1;-moz-opacity:1;opacity:1;pointer-events:auto;-webkit-transform:translate(-50%,0);-ms-transform:translate(-50%,0);transform:translate(-50%,0)}[data-balloon][data-balloon-break]:after{white-space:normal}[data-balloon-pos=down]:after,[data-balloon-pos=down]:before{bottom:auto;left:50%;top:100%;-webkit-transform:translate(-50%,-10px);-ms-transform:translate(-50%,-10px);transform:translate(-50%,-10px)}[data-balloon-pos=down]:after{margin-top:11px}[data-balloon-pos=down]:before{background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="12px"><path fill="rgba(17, 17, 17, 0.9)" transform="rotate(180 18 6)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>') no-repeat;background-size:100% auto;height:6px;width:18px;margin-top:5px;margin-bottom:0}[data-balloon-pos=down]:hover:after,[data-balloon-pos=down]:hover:before{-webkit-transform:translate(-50%,0);-ms-transform:translate(-50%,0);transform:translate(-50%,0)}[data-balloon-pos=left]:after,[data-balloon-pos=left]:before{bottom:auto;left:auto;right:100%;top:50%;-webkit-transform:translate(10px,-50%);-ms-transform:translate(10px,-50%);transform:translate(10px,-50%)}[data-balloon-pos=left]:after{margin-right:11px}[data-balloon-pos=left]:before{background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12px" height="36px"><path fill="rgba(17, 17, 17, 0.9)" transform="rotate(-90 18 18)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>') no-repeat;background-size:100% auto;height:18px;width:6px;margin-right:5px;margin-bottom:0}[data-balloon-pos=left]:hover:after,[data-balloon-pos=left]:hover:before{-webkit-transform:translate(0,-50%);-ms-transform:translate(0,-50%);transform:translate(0,-50%)}[data-balloon-pos=right]:after,[data-balloon-pos=right]:before{bottom:auto;left:100%;top:50%;-webkit-transform:translate(-10px,-50%);-ms-transform:translate(-10px,-50%);transform:translate(-10px,-50%)}[data-balloon-pos=right]:after{margin-left:11px}[data-balloon-pos=right]:before{background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12px" height="36px"><path fill="rgba(17, 17, 17, 0.9)" transform="rotate(90 6 6)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>') no-repeat;background-size:100% auto;height:18px;width:6px;margin-bottom:0;margin-left:5px}[data-balloon-pos=right]:hover:after,[data-balloon-pos=right]:hover:before{-webkit-transform:translate(0,-50%);-ms-transform:translate(0,-50%);transform:translate(0,-50%)}[data-balloon-length]:after{white-space:normal}[data-balloon-length=small]:after{width:80px}[data-balloon-length=medium]:after{width:150px}[data-balloon-length=large]:after{width:260px}[data-balloon-length=xlarge]:after{width:90vw}@media screen and (min-width:768px){[data-balloon-length=xlarge]:after{width:380px}}[data-balloon-length=fit]:after{width:100%}
-</style>
-<style>
-	.icon {
-	   width: 1em; height: 1em;
-	   vertical-align: -0.15em;
-	   fill: currentColor;
-	   overflow: hidden;
-	}
+<?php #<script src="//at.alicdn.com/t/font_451652_693q9kvfidym0a4i.js"></script>
+//<style type="text/css">
+//.icon {
+//   width: 1em; height: 1em;
+//   vertical-align: -0.15em;
+//   fill: currentColor;
+//   overflow: hidden;
+//}
+//</style> ?>
+<?php #<script src="//at.alicdn.com/t/font_434159_4dtjyqehqynl8fr.js"></script ?>
+<?php #<!-- I think it's not a good idea to use in index... --> ?>
+<?php #<!-- bibi~ スタート --> ?>
+<?php #<link rel="stylesheet" href="https://moezx.2heng.xin/blog/assets/css/balloon.min.css"> ?>
 
-	.overlay{position:fixed;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0,.7);transition:opacity .5s;visibility:hidden;opacity:0;}
-	.overlay:target{visibility:visible;opacity:1}
-	.popup{margin:70px auto;padding:20px;background:#fff;border-radius:5px;width:30%;position:relative;transition:all 5s ease-in-out}
-	.popup h2{margin-top:0;color:#333;font-family:Tahoma,Arial,sans-serif}
-	.popup .close{position:absolute;top:20px;right:30px;transition:all .2s;font-size:30px;font-weight:700;text-decoration:none;color:#333}
-	.popup .close:hover{color:#ff748c}
-	.popup .content{max-height:30%;overflow:auto}
-	@media screen and (max-width:700px){.box{width:70%}
-	.popup{width:70%}
-	}
-	.popup-m{margin:70px auto;padding:20px;background:#fff;border-radius:5px;width:30%;position:relative;transition:all 5s ease-in-out}
-	.popup-m h2{margin-top:0;color:#333;font-family:Tahoma,Arial,sans-serif}
-	.popup-m .close{position:absolute;top:20px;right:30px;transition:all .2s;font-size:30px;font-weight:700;text-decoration:none;color:#333}
-	.popup-m .close:hover{color:#ff748c}
-	.popup-m .content{max-height:30%;overflow:auto}
-	@media screen and (max-width:700px){.box{width:70%}
-	.popup-m{width:90%}
-	}
-	
-	.container2{top:0;left:0;margin-top:0;margin-left:0;width:100%;border-radius:0;background:0 0}
-	.container2 .body{box-sizing:border-box;padding:0;width:100%;height:30%;border-radius:0;box-shadow:0 0 0 0 transparent,0 0 0 0 transparent,0 0 0 0 transparent;text-align:center}
-	.container2 .body p{font-size:14px}
-	.container2 .body a{display:inline-block;margin:7px;text-decoration:none}
-	.container2 .body i{display:inline-block;width:42px;height:42px;border-radius:42px;background-color:rgba(0,0,0,.1);color:rgba(0,0,0,.5);font-style:normal;font-size:1pc;line-height:42px;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
-	.container2 .body i:hover{background-color:pink;color:#fff}
-	@-webkit-keyframes shake{0%,to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
-	10%,30%,50%,70%,90%{-webkit-transform:translate3d(-10px,0,0);transform:translate3d(-10px,0,0)}
-	20%,40%,60%,80%{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}
-	}
-	@keyframes shake{0%,to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
-	10%,30%,50%,70%,90%{-webkit-transform:translate3d(-10px,0,0);transform:translate3d(-10px,0,0)}
-	20%,40%,60%,80%{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}
-	}
-	
-	span.hpopup{height:0;color:#fff;position:relative;cursor:pointer}
-span.hpopup:after{content:attr(data-popuptext);background:rgba(0,0,0,.85);border-radius:3px;opacity:0;top:0;left:-100px;position:absolute;transition:.5s ease;white-space:nowrap;max-height:0}
-	span.hpopup:hover:after{opacity:1;top:1.2em;font-size:13px;max-height:200px;padding:.4em}
-
-	.my-face-shake{animation:my-face 5s infinite ease-in-out;display:inline-block;margin:0 5px}
-	@keyframes my-face-shake{2%{transform:translate(0,1.5px) rotate(1.5deg)}
-	4%{transform:translate(0,-1.5px) rotate(-.5deg)}
-	6%{transform:translate(0,1.5px) rotate(-1.5deg)}
-	8%{transform:translate(0,-1.5px) rotate(-1.5deg)}
-	10%{transform:translate(0,2.5px) rotate(1.5deg)}
-	12%{transform:translate(0,-.5px) rotate(1.5deg)}
-	14%{transform:translate(0,-1.5px) rotate(1.5deg)}
-	16%{transform:translate(0,-.5px) rotate(-1.5deg)}
-	18%{transform:translate(0,.5px) rotate(-1.5deg)}
-	20%{transform:translate(0,-1.5px) rotate(2.5deg)}
-	22%{transform:translate(0,.5px) rotate(-1.5deg)}
-	24%{transform:translate(0,1.5px) rotate(1.5deg)}
-	26%{transform:translate(0,.5px) rotate(.5deg)}
-	28%{transform:translate(0,.5px) rotate(1.5deg)}
-	30%{transform:translate(0,-.5px) rotate(2.5deg)}
-	32%{transform:translate(0,1.5px) rotate(-.5deg)}
-	34%{transform:translate(0,1.5px) rotate(-.5deg)}
-	36%{transform:translate(0,-1.5px) rotate(2.5deg)}
-	38%{transform:translate(0,1.5px) rotate(-1.5deg)}
-	40%{transform:translate(0,-.5px) rotate(2.5deg)}
-	42%{transform:translate(0,2.5px) rotate(-1.5deg)}
-	44%{transform:translate(0,1.5px) rotate(.5deg)}
-	46%{transform:translate(0,-1.5px) rotate(2.5deg)}
-	48%{transform:translate(0,-.5px) rotate(.5deg)}
-	50%{transform:translate(0,.5px) rotate(.5deg)}
-	52%{transform:translate(0,2.5px) rotate(2.5deg)}
-	54%{transform:translate(0,-1.5px) rotate(1.5deg)}
-	56%{transform:translate(0,2.5px) rotate(2.5deg)}
-	58%{transform:translate(0,.5px) rotate(2.5deg)}
-	60%{transform:translate(0,2.5px) rotate(2.5deg)}
-	62%{transform:translate(0,-.5px) rotate(2.5deg)}
-	64%{transform:translate(0,-.5px) rotate(1.5deg)}
-	66%{transform:translate(0,1.5px) rotate(-.5deg)}
-	68%{transform:translate(0,-1.5px) rotate(-.5deg)}
-	70%{transform:translate(0,1.5px) rotate(.5deg)}
-	72%{transform:translate(0,2.5px) rotate(1.5deg)}
-	74%{transform:translate(0,-.5px) rotate(.5deg)}
-	76%{transform:translate(0,-.5px) rotate(2.5deg)}
-	78%{transform:translate(0,-.5px) rotate(1.5deg)}
-	80%{transform:translate(0,1.5px) rotate(1.5deg)}
-	82%{transform:translate(0,-.5px) rotate(.5deg)}
-	84%{transform:translate(0,1.5px) rotate(2.5deg)}
-	86%{transform:translate(0,-1.5px) rotate(-1.5deg)}
-	88%{transform:translate(0,-.5px) rotate(2.5deg)}
-	90%{transform:translate(0,2.5px) rotate(-.5deg)}
-	92%{transform:translate(0,.5px) rotate(-.5deg)}
-	94%{transform:translate(0,2.5px) rotate(.5deg)}
-	96%{transform:translate(0,-.5px) rotate(1.5deg)}
-	98%{transform:translate(0,-1.5px) rotate(-.5deg)}
-	0%,100%{transform:translate(0,0) rotate(0)}
-	}
-
-	
-</style>
 <center>
-<!-- Below is popup box, you may add any popup window you like, all you need is a <a> tag to href="popupbox_name", popupbox_name is the id of the first layer of <div>
-以下是弹出窗口部分，可自行添加窗口，通过跳转到"#popupbox_name"的a标签调用，popupbox_name就是下面第一层div的id，可自定义 -->
 <?php  if ( wp_is_mobile() == false ) { ?>
-<!-- About for computer -->
 <div id="about" class="overlay">
 	<div class="popup"><br>
 		<h2><b>关于我</b></h2>
@@ -140,7 +49,6 @@ span.hpopup:after{content:attr(data-popuptext);background:rgba(0,0,0,.85);border
 </div>
 <?php } ?>
 <?php  if ( wp_is_mobile() == true ) { ?>
-<!-- About for mobile -->
 <div id="about" class="overlay">
 	<div class="popup-m"><br>
 		<h2><b>关于我</b></h2>
@@ -155,13 +63,12 @@ span.hpopup:after{content:attr(data-popuptext);background:rgba(0,0,0,.85);border
 	</div>
 </div>
 <?php } ?>
-<!-- Subscribe, need plugin WP Easy Post Mailer -->
 <div id="subscribebox" class="overlay">
 	<div class="popup"><br>
 		<h2><b>订阅喵~</b></h2>
 		<a class="close" href="#mashiro">&times;</a>
 		<div class="content">
-			<?php #echo wpm_form(1); ?>
+			<?php echo wpm_form(1); ?>
 		</div>
 	</div>
 </div>
@@ -194,37 +101,36 @@ span.hpopup:after{content:attr(data-popuptext);background:rgba(0,0,0,.85);border
 					</div>
 				</div>
 		</div>
-		<a href="#subscribebox"><span style="color: #ff748c;">邮件订阅&nbsp;<i class="fa fa-envelope" aria-hidden="true"></i></span></a><br><br>
+		<a href="#subscribebox"><span style="color: #ff748c;">邮件订阅&nbsp;<i class="fa fa-envelope" aria-hidden="true"></i></span></a><br><a href="https://2heng.xin/feed/" target="_blank"><span style="color: #ff748c;">RSS订阅&nbsp;<i class="fa fa-rss-square" aria-hidden="true"></i></span></a><br><a href="https://baike.baidu.com/item/rss/24470?fr=aladdin" title="RSS是什么？" target="_blank"><span style="font-size: 8pt;color: #999999;"><i class="fa fa-question-circle-o" aria-hidden="true"></i>&nbsp;RSS是什么？</span></a><br><br>
 	</div>
 </div>
 <div id="donatebox" class="overlay">
 	<div class="popup-m"><br>
-		<h2><i class="fa fa-hand-o-right" aria-hidden="true"></i> <b><span class="hpopup my-face-shake" data-popuptext="留言/邮件(i@shino.cc)告诉我地址，过节时会寄明信片哦~"><i class="fa fa-gift" aria-hidden="true" style="color:#ff748c"></i></span> 谢谢饲主了喵~</b></h2>
+		<h2><b>谢谢饲主了喵~</b></h2>
 		<a class="close" href="#mashiro">&times;</a>
 		<div class="content">
-			<img src="https://2heng.xin/wp-content/uploads/2017/09/donate.png" alt="Donate"><br><br>
-			<p><a href="https://paypal.me/mashirozx" target="_blank"><span style="color: #ff748c;">Donate with PayPal&nbsp;<i class="fa fa-cc-paypal" aria-hidden="true"></i></span></a></p>
+			<iframe src="https://2heng.xin/donate/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>
 		</div>
+		<h2><i class="fa fa-hand-o-right" aria-hidden="true"></i> <b><span class="hpopup my-face-shake" data-popuptext="留言/邮件(i@shino.cc)告诉我地址，过节时会寄明信片哦~"><i class="fa fa-gift" aria-hidden="true" style="color:#ff748c"></i></span></b></h2>
 	</div>
 </div>
 <div id="qqbox" class="overlay">
 	<div class="popup"><br>
 		<h2><b>QQ</b></h2>
 		<a class="close" href="#linkme">&times;</a>
-		<div class="content"><br>
+		<div class="content"><span style="font-size: 8pt;color: #999999;">欢迎调戏，不过博文相关的内容还请在相应文章下留言提问ꉂ(ˊᗜˋ*)</span><br><br>
 			<h1><b>2436156978</b></h1>
 			<br>
-			请注明来自博客 (⑉•ᴗ•⑉)Thanks❤︎"
+			加好友请使用暗号：喵喵喵！ (⑉•ᴗ•⑉)Thanks❤︎"
 		</div>
 	</div>
 </div>
 <div id="wxbox" class="overlay">
-	<div class="popup">
+	<div class="popup-m">
 		<h2><b>微信</b></h2>
 		<a class="close" href="#linkme">&times;</a>
 		<div class="content">
-			<img src="https://2heng.xin/wp-content/uploads/2017/10/weixin_friends.jpg" alt="扫一扫">
-                           请注明来自博客 :)
+			
 		</div>
 	</div>
 </div>
@@ -233,13 +139,40 @@ span.hpopup:after{content:attr(data-popuptext);background:rgba(0,0,0,.85);border
 		<a class="close" href="#mashiro">&times;</a>
 		<div class="content">
 			<center><i class="myiconfont myicon-cat-head"  style="font-size: 60px;"></i></center>
-			<br><span id="span_dt_dt"></span>
+			<b>在充满热情的<span id="monitorday"></span>天里</b>
+			<br>发表了<?php echo wp_statistics_countposts(); ?>篇博文
+			<br>收到了<?php echo wp_statistics_countcomment(); ?>条留言
+			<br><?php echo (wp_statistics_visitor(total)); ?>个独立IP造访
+			<br>累计PV <?php echo (wp_statistics_visit(total)); ?>
+			<br>当前在线<?php echo (wp_statistics_useronline()+1); ?>人
+			<br>您是今天第<?php echo (wp_statistics_visitor(today)+1); ?>位访客
+			<!-- Naive... <br><span id="span_dt_dt"></span> -->
 			<br>---------------------
 			<br><b>服务器情报</b>
-			<br>MySQL在<?php timer_stop(3); ?>秒内处理了<?php echo get_num_queries(); ?>条请求
-			<br>域名解析和CDN由<a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=9vqtqvpr&utm_source=9vqtqvpr" target="_blank" rel="noopener" style="color: #ff748c;">阿里云</a>提供
-			<br>静态资源托管于<a href="https://portal.qiniu.com/signup?code=3law7j8vjpniq" target="_blank" rel="noopener" style="color: #ff748c;">七牛云</a> 
-			<br>服务器托管于东京<a href="http://www.vultr.com/?ref=7196564" target="_blank" rel="noopener" style="color: #ff748c;">Vultr</a><br><br><br>
+			<br>在<?php timer_stop(3); ?>秒内处理了<?php echo get_num_queries(); ?>条请求
+			<!--<br>本月流量：
+			<?php  /*
+				error_reporting(E_ERROR);
+				ini_set("display_errors", "Off");
+				$request = "https://api.vultr.com/v1/server/bandwidth?SUBID=10660730&api_key=EOXBNVKIHDZAFQMEEL7XHK3QFQVOMHIM4N2A";
+				$serviceInfo = json_decode(file_get_contents($request));
+				$income = $serviceInfo->incoming_bytes;
+				$outgo = $serviceInfo->outgoing_bytes;
+				$sumin = 0;
+				$sumout = 0;
+				foreach ($income as $invalue) {
+					$sumin = $sumin + $invalue[1];
+				}
+				foreach ($outgo as $outvalue) {
+					$sumout = $sumout + $outvalue[1];
+				}
+				$used_b = ($sumin + $sumout) / 1024 / 1024 / 1024;
+				echo number_format("{$used_b}", 3, ".", "") . "GB / 1000GB";
+				*/
+			?>-->
+			<br>域名解析和CDN由<a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=9vqtqvpr&utm_source=9vqtqvpr" target="_blank" rel="noopener">阿里云</a>提供
+			<br>静态资源托管于<a href="https://portal.qiniu.com/signup?code=3law7j8vjpniq" target="_blank" rel="noopener">七牛云</a> 
+			<br>服务器托管于东京<a href="http://www.vultr.com/?ref=7196564" target="_blank" rel="noopener">Vultr</a><br><br><br>
 		</div>
 	</div>
 </div>
@@ -256,7 +189,7 @@ span.hpopup:after{content:attr(data-popuptext);background:rgba(0,0,0,.85);border
 					update();
 					function update() {
 						gethi = new XMLHttpRequest();
-						gethi.open("GET","https://api.shino.cc/hi/"); 
+						gethi.open("GET","https://sslapi.hitokoto.cn/?c=a"); 
 						gethi.send();
 						gethi.onreadystatechange = function () {
 						if (gethi.readyState===4 && gethi.status===200) {
@@ -325,9 +258,9 @@ span.hpopup:after{content:attr(data-popuptext);background:rgba(0,0,0,.85);border
 		e_minsold = (e_hrsold - hrsold) * 60;
 		minsold = setzero(Math.floor((e_hrsold - hrsold) * 60));
 		seconds = setzero(Math.floor((e_minsold - minsold) * 60));
-		span_dt_dt.innerHTML = "博客已经萌萌哒运行了<br>" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
-		//If you need only days, uncomment next line.
-		//monitorday.innerHTML = daysold;
+		//span_dt_dt.innerHTML = "博客已经萌萌哒运行了<br>" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+		//Like it but not beautiful...
+		monitorday.innerHTML = daysold;
 	}
 
 	function setzero(i) {
@@ -341,16 +274,28 @@ span.hpopup:after{content:attr(data-popuptext);background:rgba(0,0,0,.85);border
 <footer class="footer" role="contentinfo">
 <div class="wrapper wrapper--wide split split--responsive">
 	<div class="split__title">
-		© 2017 Mashiro 沪ICP备17028213号
+		© 2017 樱花庄的白猫 沪ICP备17028213号
 	</div>
-		Powered by WordPress, Theme <a href="https://github.com/moezx/Moezx-WP-theme" target="_blank">Moezx</a> by <a href="https://2heng.xin" target="_blank">Mashiro</a>
+		Powered by WordPress, Crafted with <i class="fa fa-heart" aria-hidden="true" style="color:pink"></i> by <a href="https://2heng.xin" rel="author">Mashiro</a>.
 </div>
 </footer>
 <form class="js-search search-form search-form--modal" method="get" action="<?php bloginfo('url'); ?>" role="search">
 	<div class="search-form__inner">
 		<div>
 			<i class="iconfont"></i>
-			<input class="text-input" name="s" placeholder="Enter keyword ..." type="search">
+			<input class="text-input" name="s" placeholder="输入关键词..." type="search">
+		</div>
+		<div class="mycloud"><br><br>
+				<style>
+				.tagbox{background-color:#ffd5c0;border:0;margin:0 10px 10px 0;line-height:200%;padding:2px 0 2px 2px;border-radius:5px;white-space:nowrap}
+				.taglink{padding:2px;color:#000}
+				.tagbox a,.tagbox a:active,.tagbox a:visited{text-decoration:none}
+				.tagcount{background-color:#c0cbff;color:#fff;position:relative;padding:2px;border-top-right-radius:5px;border-bottom-right-radius:5px}
+
+				</style>
+				<?php
+				echo  wpb_tags();
+				?>
 		</div>
 	</div>
 </form>
@@ -384,6 +329,9 @@ span.hpopup:after{content:attr(data-popuptext);background:rgba(0,0,0,.85);border
 			contentSelector: '.js-posts'
 		};
 	</script>
+<script type="text/javascript"> 
+var a_idx=0;jQuery(document).ready(function(c){c("body").click(function(d){var a="\u5bcc\u5f3a \u6c11\u4e3b \u6587\u660e \u548c\u8c10 \u81ea\u7531 \u5e73\u7b49 \u516c\u6b63 \u6cd5\u6cbb \u7231\u56fd \u656c\u4e1a \u8bda\u4fe1 \u53cb\u5584".split(" "),b=c("<span/>").text(a[a_idx]);a_idx=(a_idx+1)%a.length;a=d.pageY;b.css({"z-index":1E69,top:a-20,left:d.pageX,position:"absolute","font-weight":"bold",color:"#ff6651"});c("body").append(b);b.animate({top:a-180,opacity:0},1500,function(){b.remove()})})});
+</script>
 <script type="text/javascript">
 function  showImg(){
 document.getElementById("wxImg").style.display='block';
@@ -408,7 +356,6 @@ document.getElementById("wxImg").style.display='none';
 	});
 </script>
 <!--これはぼくの花火ですあなたが好きならそれを取る:P-->
-<!-- ps. This is also avaliable in Atom Editor, search for Active Power Mode plugin. -->
 <script>
 eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(7 1D(a,b){6(E 9===\'11\'&&E 1h===\'11\')1h.9=b();D 6(E Z===\'7\'&&Z.2Z)Z([],b);D 6(E 9===\'11\')9["v"]=b();D a["v"]=b()})(2Y,7(){q(7(c){4 d={};7 F(a){6(d[a])q d[a].9;4 b=d[a]={9:{},1o:a,1p:T};c[a].2X(b.9,b,b.9,F);b.1p=19;q b.9}F.m=c;F.c=d;F.p="";q F(0)})([7(g,h,j){\'2S 2M\';4 k=8.S(\'2H\');k.L=t.1r;k.G=t.1v;k.C.2G=\'M:2F;H:0;I:0;2E-2D:2C;z-2b:28\';t.27(\'1W\',7(){k.L=t.1r;k.G=t.1v});8.B.V(k);4 l=k.1T(\'2d\');4 m=[];4 n=0;v.13=19;7 K(a,b){q r.A()*(b-a)+a}7 12(a){6(v.18){4 u=K(0,1Q);q\'1P(\'+K(u-10,u+10)+\', 1O%, \'+K(1L,1K)+\'%, \'+1+\')\'}D{q t.U(a).w}}7 1j(){4 a=8.1J;4 b;6(a.1l===\'1I\'||(a.1l===\'W\'&&a.1H(\'1G\')===\'1F\')){4 c=j(1)(a,a.1z);b=a.1s();q{x:c.I+b.I,y:c.H+b.H,w:12(a)}}4 d=t.2l();6(d.1x){4 e=d.1y(0);4 f=e.1A;6(f.1B===8.1C){f=f.1w}b=e.1s();q{x:b.I,y:b.H,w:12(f)}}q{x:0,y:0,w:\'1E\'}}7 1q(x,y,a){q{x:x,y:y,O:1,w:a,N:{x:-1+r.A()*2,y:-3.5+r.A()*2}}}7 v(){{4 a=1j();4 b=5+r.R(r.A()*10);1M(b--){m[n]=1q(a.x,a.y,a.w);n=(n+1)%1N}}{6(v.13){4 c=1+2*r.A();4 x=c*(r.A()>0.5?-1:1);4 y=c*(r.A()>0.5?-1:1);8.B.C.1d=x+\'1b\';8.B.C.1a=y+\'1b\';1R(7(){8.B.C.1d=\'\';8.B.C.1a=\'\'},1S)}}};v.18=T;7 Q(){1t(Q);l.1U(0,0,k.L,k.G);1V(4 i=0;i<m.1X;++i){4 a=m[i];6(a.O<=0.1)1Y;a.N.y+=0.1Z;a.x+=a.N.x;a.y+=a.N.y;a.O*=0.20;l.21=a.O;l.22=a.w;l.23(r.R(a.x-1.5),r.R(a.y-1.5),3,3)}}1t(Q);g.9=v},7(n,o){(7(){4 l=[\'24\',\'25\',\'L\',\'G\',\'26\',\'1m\',\'1k\',\'29\',\'2a\',\'1i\',\'2c\',\'2e\',\'2f\',\'2g\',\'2h\',\'2i\',\'2j\',\'2k\',\'37\',\'2m\',\'2n\',\'2o\',\'2p\',\'2q\',\'2r\',\'2s\',\'2t\',\'2u\',\'2v\',\'2w\',\'2x\'];4 m=t.2y!=2z;7 J(b,c,d){4 e=d&&d.2A||T;6(e){4 f=8.2B(\'#1g-1f-1e-M-17-Y\');6(f){f.1w.1n(f)}}4 g=8.S(\'Y\');g.1o=\'1g-1f-1e-M-17-Y\';8.B.V(g);4 h=g.C;4 i=t.U?U(b):b.2I;h.2J=\'2K-2L\';6(b.16!==\'W\')h.2N=\'2O-2P\';h.M=\'2Q\';6(!e)h.2R=\'15\';l.2T(7(a){h[a]=i[a]});6(m){6(b.2U>X(i.G))h.1m=\'2V\'}D{h.2W=\'15\'}g.P=b.1c.1u(0,c);6(b.16===\'W\')g.P=g.P.30(/\\s/g,"\\31");4 j=8.S(\'32\');j.P=b.1c.1u(c)||\'.\';g.V(j);4 k={H:j.33+X(i[\'1k\']),I:j.34+X(i[\'1i\'])};6(e){j.C.35=\'#36\'}D{8.B.1n(g)}q k}6(E n!="14"&&E n.9!="14"){n.9=J}D{t.J=J}}())}])});',62,194,'||||var||if|function|document|exports|||||||||||||||||return|Math||window||POWERMODE|color||||random|body|style|else|typeof|__webpack_require__|height|top|left|getCaretCoordinates|getRandom|width|position|velocity|alpha|textContent|loop|round|createElement|false|getComputedStyle|appendChild|INPUT|parseInt|div|define||object|getColor|shake|undefined|hidden|nodeName|mirror|colorful|true|marginTop|px|value|marginLeft|caret|textarea|input|module|borderLeftWidth|getCaret|borderTopWidth|tagName|overflowY|removeChild|id|loaded|createParticle|innerWidth|getBoundingClientRect|requestAnimationFrame|substring|innerHeight|parentNode|rangeCount|getRangeAt|selectionStart|startContainer|nodeType|TEXT_NODE|webpackUniversalModuleDefinition|transparent|text|type|getAttribute|TEXTAREA|activeElement|80|50|while|500|100|hsla|360|setTimeout|75|getContext|clearRect|for|resize|length|continue|075|96|globalAlpha|fillStyle|fillRect|direction|boxSizing|overflowX|addEventListener|999999|borderRightWidth|borderBottomWidth|index|borderStyle||paddingTop|paddingRight|paddingBottom|paddingLeft|fontStyle|fontVariant|fontWeight|getSelection|fontSize|fontSizeAdjust|lineHeight|fontFamily|textAlign|textTransform|textIndent|textDecoration|letterSpacing|wordSpacing|tabSize|MozTabSize|mozInnerScreenX|null|debug|querySelector|none|events|pointer|fixed|cssText|canvas|currentStyle|whiteSpace|pre|wrap|strict|wordWrap|break|word|absolute|visibility|use|forEach|scrollHeight|scroll|overflow|call|this|amd|replace|u00a0|span|offsetTop|offsetLeft|backgroundColor|aaa|fontStretch'.split('|'),0,{}))
 </script>  

@@ -98,7 +98,7 @@ include_once( TEMPLATEPATH. '/includes/shortcodes.php' );
 /* 替换图片链接为 https */
 function my_content_manipulator($content){
     if( is_ssl() ){
-        $content = str_replace('http://2heng.xin/wp-content/uploads', 'https://2heng.xin/wp-content/uploads', $content);
+        $content = str_replace('http://www.dahuzi.me/wp-content/uploads', 'https://www.dahuzi.me/wp-content/uploads', $content);
     }
     return $content;
     }
@@ -264,7 +264,7 @@ global $commentcount,$wpdb, $post;
 			<?php echo get_avatar( $comment, 40 ); ?>
 		</div>
 		<div class="comment-chat" <?php if(get_avatar($comment, 40)==true)?>>
-        	<div class="comment-metadata"><div class="fn"><?php comment_author_link() ?><?php if($comment->user_id == 1) echo '<span id="comment_admin">博主</span>' ?></div> :<?php edit_comment_link('编辑','&nbsp;&nbsp;',''); ?><time><?php echo timeago( $comment->comment_date_gmt ); ?></time> <div class="reply"><?php comment_reply_link(array_merge( $args, array('reply_text' => '回复', 'add_below' =>$add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))); ?></div></div>
+        	<div class="comment-metadata"><div class="fn"><?php comment_author_link() ?><?php #echo convertua(get_comment_agent());?><?php if($comment->user_id == 1) echo '<span id="comment_admin">博主</span>' ?></div> :<?php edit_comment_link('编辑','&nbsp;&nbsp;',''); ?><time><?php echo timeago( $comment->comment_date_gmt ); ?></time> <div class="reply"><?php comment_reply_link(array_merge( $args, array('reply_text' => '回复', 'add_below' =>$add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))); ?></div></div>
 			<?php if ( $comment->comment_approved == '0' ){?><span style="color:#C00; font-style:inherit">您的评论正在等待审核中...</span><br /><?php } ?>
 			<?php comment_text() ?>
 <div class="comment-metaip"><time><?php echo convertip(get_comment_author_ip()); ?></time></div>
@@ -602,7 +602,7 @@ function the_content_nofollow($content)
 
 //Comment Location Start
 function convertip($ip) {
-	$dat_path = dirname(__FILE__).'/QQWry.Dat'; //*数据库路径*//
+	$dat_path = dirname(__FILE__).'/QQWry.Dat'; //*数据库路径/QQWry.Dat*//
     if(!$fd = @fopen($dat_path, 'rb')){
         return 'IP date file not exists or access denied';
     }
@@ -748,7 +748,7 @@ function chenxing_async_script( $url ){
 复制版权信息
 **/
 //内容被复制后自动添加文章链接 
-function add_copyright_text() { 
+/*function add_copyright_text() { 
 global $user_ID; 
 if( $user_ID && current_user_can('level_10') ) {}
 else { ?>
@@ -775,8 +775,9 @@ else { ?>
 
 <?php } add_action( 'wp_footer', 'add_copyright_text');
 
+*/
 /**
-新窗口打开链接（无效）
+新窗口打开链接（该主题无效）
 **/
 //让所有的链接都在新窗口打开↓ 
 /**function autoblank($text) {
@@ -824,5 +825,89 @@ function spam_protection_pre($commentdata){
 if($comment_data['comment_type']==''){
 	add_filter('preprocess_comment','spam_protection_pre');
 }
+
+/* Get UA */
+/* Get comment_agent */
+function get_comment_agent( $comment_ID = 0 ) {
+    $comment = get_comment( $comment_ID );
+ 
+    /**
+     * Filters the comment author's returned User Agent.
+     *
+	 * Added by Mashiro
+	 * Based on get_comment_author_IP function. See: https://developer.wordpress.org/reference/functions/get_comment_author_ip/
+     *
+     * @param string     $comment_author_IP The comment author's IP address.
+     * @param int        $comment_ID        The comment ID.
+     * @param WP_Comment $comment           The comment object.
+     */
+    return apply_filters( 'get_comment_agent', $comment->comment_agent, $comment->comment_ID, $comment );
+}
+
+/* Convert UA to HTML */
+function convertua($ua) {
+	// URLencode
+	$url_parm=urlencode($ua);
+	// Request API
+	error_reporting(E_ERROR);
+	//ini_set("display_errors", "Off");
+	$request = "http://www.useragentstring.com/?uas=" . $url_parm . "&getJSON=all";
+	$getua = json_decode(file_get_contents($request));
+	$AgentName = $getua->agent_name; //Chrome / Android Webkit Browser / Safari / Firefox / BlackBerry / Internet Explorer / Edge
+	$OsType = $getua->os_type; //Windows / Android / Linux / Macintosh / BlackBerryOS 
+	$OsName = $getua->os_name; //Windows 10 / Windows 8 / Windows 8.1 / Windows 7 / Windows XP /  / Android / Linux / OS X / iPhone OS / BlackBerryOS / FreeBSD
+	$LinuxDistibution = $getua->linux_distibution; //Ubuntu / CentOS / Fedora / Debian / Red Hat
+	
+	// Browser name
+	if (($AgentName == "Chrome") || ($AgentName == "Android Webkit Browser") || ($AgentName == "Safari") || ($AgentName == "Firefox") || ($AgentName == "BlackBerry") || ($AgentName == "Internet Explorer") || ($AgentName == "Edge")) {
+		if (($AgentName == "Android Webkit Browser") || ($AgentName == "Internet Explorer")) {
+			$print_browser = str_replace( " ", "-",$AgentName);
+		} else {
+			$print_browser = $AgentName;
+		}
+	}
+	else {
+		$print_browser = "unkwon-browser";
+	}
+	
+	// System name
+	if (($LinuxDistibution == "Ubuntu") || ($LinuxDistibution == "CentOS") || ($LinuxDistibution == "Fedora") || ($LinuxDistibution == "Debian") || ($LinuxDistibution == "Red Hat")) {
+		if ($LinuxDistibution == "Red Hat") {
+			$print_system = str_replace( " ", "-",$LinuxDistibution);
+		} else {
+			$print_system = $LinuxDistibution; // Linux Distributions
+		}
+	} elseif (($OsName == "Windows 10") || ($OsName == " Windows 8") || ($OsName == "Windows 7") || ($OsName == "Windows XP") || ($OsName == "Android") || ($OsName == "Linux") || ($OsName == "OS X") || ($OsName == "iPhone OS") || ($OsName == "BlackBerryOS") || ($OsName == "FreeBSD")) {
+		if (($OsName == "Windows 10") || ($OsName == " Windows 8") || ($OsName == "Windows 8.1") || ($OsName == "Windows 7") || ($OsName == "Windows XP") || ($OsName == "OS X") || ($OsName == "iPhone OS")) {
+			$print_system = str_replace( " ", "-",$OsName);
+		} elseif ($OsName == "Windows 8.1") {
+			$print_system = "Windows-9";
+		} else {
+			$print_system = $OsName; // OS name like Windows 10, iPhone
+		}
+	} elseif (($OsType == "Windows") || ($OsType == "Android") || ($OsType == "Linux") || ($OsType == "Macintosh") || ($OsType == "BlackBerryOS")) {
+		$print_system = $OsType; // No specified OS info
+	} else { 
+		$print_system = "unkwon-system";
+	}
+	
+	return "&nbsp;<a title=\"OS: " . $print_system . "; Browser: " . $print_browser . "\"><svg class=\"icon\" aria-hidden=\"true\" ><use xlink:href=\"#system-icon-" . $print_system . "\"></use></svg>&nbsp;<svg class=\"icon\" aria-hidden=\"true\"><use xlink:href=\"#system-icon-" . $print_browser . "\"></use></svg></a>";
+	//return "<i class=\"system-icon system-icon-" . $print_system . "\"></i><i class=\"system-icon system-icon-" . $print_browser . "\"></i>";	
+	//return $print_system . $print_browser;
+	//return $ua;
+}
+/* Get UA End */
+
+/* Tag Cloud */
+/* 待完善，需要仅显示排名靠前的tags */
+function wpb_tags() { 
+$wpbtags =  get_tags();
+foreach ($wpbtags as $tag) { 
+$string .= '<span class="tagbox"><a class="taglink" href="'. get_tag_link($tag->term_id) .'">&nbsp;'. $tag->name . '&nbsp;</a><span class="tagcount">&nbsp;'. $tag->count .'&nbsp;</span></span>' . "\n"   ;
+} 
+return $string;
+} 
+add_shortcode('wpbtags' , 'wpb_tags' );
+/* Tag Cloud End */
 
 ?>
