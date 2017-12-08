@@ -22,7 +22,7 @@ Version: 2017.11.30
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-shadow: 0 0 1px rgba(0,0,0,0.22);letter-spacing: .15px;}
 body{margin:0;}
 
-/* 鼠标？好像会导致一些奇怪的bug。。在body里面加上cursor:url(https://2heng.xin/wp-content/themes/Variant/images/miku.cur),auto;就行了*/
+
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
 audio:not([controls]){display:none;height:0}
