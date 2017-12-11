@@ -5,7 +5,7 @@ WoW, such a wonderful WordPress theme!
 
 Based on [Pixel Revel](http://pixelrevel.com/)'s [Thoughts](http://pixelrevel.com/themes/thoughts/) theme.
 
-[LIVE DEMO](https://demo.2heng.xin)
+[LIVE DEMO](https://demo.moezx.cc)
 
 ## How to use?
 
