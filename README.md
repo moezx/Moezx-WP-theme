@@ -1,11 +1,9 @@
 # Moezx - WordPress Theme
-WoW, such a wonderful WordPress theme!
+WoW, such a wonderful WordPress theme! [LIVE DEMO](https://demo.moezx.cc)
 
 ![Screenshot](https://github.com/moezx/Moezx-WP-theme/blob/master/screenshot.jpg?raw=true)
 
 Based on [Pixel Revel](http://pixelrevel.com/)'s [Thoughts](http://pixelrevel.com/themes/thoughts/) theme.
-
-[LIVE DEMO](https://demo.moezx.cc)
 
 ## How to use?
 
