@@ -152,7 +152,7 @@
 					update();
 					function update() {
 						gethi = new XMLHttpRequest();
-						gethi.open("GET","https://api.shino.cc/hi/"); 
+						gethi.open("GET","https://pub-api.2heng.xin/hitokoto/?encode=json"); 
 						gethi.send();
 						gethi.onreadystatechange = function () {
 						if (gethi.readyState===4 && gethi.status===200) {
